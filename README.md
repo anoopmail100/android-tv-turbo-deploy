@@ -6,6 +6,8 @@ A [Claude Code](https://claude.com/claude-code) skill that speeds up the edit â†
 
 Measured on a real Android TV app, deployed to a physical Google TV device over `adb connect`:
 
+![Build and deploy time, before vs after](assets/benchmark.svg)
+
 | Scenario | Before | After |
 |---|---|---|
 | Rebuild with no code changes | ~35s | ~2s |

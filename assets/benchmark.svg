@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="340" viewBox="0 0 640 340" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+  <rect width="640" height="340" fill="#ffffff"/>
+  <text x="320" y="30" text-anchor="middle" font-size="18" font-weight="bold" fill="#1a1a1a">Build + deploy time: before vs after</text>
+
+  <!-- Y axis gridlines + labels (0-35s) -->
+  <g stroke="#e5e5e5" stroke-width="1">
+    <line x1="80" y1="260" x2="600" y2="260"/>
+    <line x1="80" y1="200" x2="600" y2="200"/>
+    <line x1="80" y1="140" x2="600" y2="140"/>
+    <line x1="80" y1="80"  x2="600" y2="80"/>
+  </g>
+  <g font-size="12" fill="#888888" text-anchor="end">
+    <text x="72" y="264">0s</text>
+    <text x="72" y="204">12s</text>
+    <text x="72" y="144">24s</text>
+    <text x="72" y="84">35s</text>
+  </g>
+
+  <!-- Scenario 1: No-op rebuild -->
+  <!-- scale: 35s -> 180px tall, baseline y=260 -->
+  <rect x="140" y="80"  width="70" height="180" fill="#d64545"/>
+  <text x="175" y="72" text-anchor="middle" font-size="13" fill="#d64545" font-weight="bold">35s</text>
+
+  <rect x="230" y="249" width="70" height="11" fill="#2f9e44"/>
+  <text x="265" y="241" text-anchor="middle" font-size="13" fill="#2f9e44" font-weight="bold">2s</text>
+
+  <text x="220" y="295" text-anchor="middle" font-size="13" fill="#1a1a1a">No-op rebuild</text>
+  <text x="220" y="312" text-anchor="middle" font-size="12" fill="#888888">(no code changed)</text>
+
+  <!-- Scenario 2: Real rebuild -->
+  <rect x="380" y="80"  width="70" height="180" fill="#d64545"/>
+  <text x="415" y="72" text-anchor="middle" font-size="13" fill="#d64545" font-weight="bold">35s</text>
+
+  <rect x="470" y="172" width="70" height="88" fill="#2f9e44"/>
+  <text x="505" y="164" text-anchor="middle" font-size="13" fill="#2f9e44" font-weight="bold">17s</text>
+
+  <text x="460" y="295" text-anchor="middle" font-size="13" fill="#1a1a1a">Real rebuild</text>
+  <text x="460" y="312" text-anchor="middle" font-size="12" fill="#888888">(one file changed)</text>
+
+  <!-- Legend -->
+  <g font-size="13">
+    <rect x="150" y="320" width="14" height="14" fill="#d64545"/>
+    <text x="170" y="331" fill="#1a1a1a">Before</text>
+    <rect x="240" y="320" width="14" height="14" fill="#2f9e44"/>
+    <text x="260" y="331" fill="#1a1a1a">After</text>
+  </g>
+</svg>
